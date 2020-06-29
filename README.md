@@ -23,7 +23,7 @@ song_data.head()
 ```
 
 Output:
-![song_data_head](https://github.com/premthomas/Logistic-Regression/blob/master/Images/song_data_head.png)
+![song_data_head](https://github.com/premthomas/Logistic-Regression/blob/master/Images/song_data_head.jpg)
 
 ## Exploring the data
 Start with find the number of columns (also popularly called features) and the number of rows of data. A dataframe object has the method called shape which returns a tuple with the number of rows and number of columns. The format of this data is '(no. of rows, no. of columns)'.
@@ -32,6 +32,6 @@ Start with find the number of columns (also popularly called features) and the n
 song_data.shape
 ```
 Output:
-![song_data_shape](https://github.com/premthomas/Logistic-Regression/blob/master/Images/song_data_shape.jpg)
+![song_data_shape](https://github.com/premthomas/Logistic-Regression/blob/master/Images/song_data_shape.png)
 
 
