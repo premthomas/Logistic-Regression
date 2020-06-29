@@ -31,7 +31,10 @@ Start with find the number of columns (also popularly called features) and the n
 ```Python
 song_data.shape
 ```
+
 Output:
+
+
 ![song_data_shape](https://github.com/premthomas/Logistic-Regression/blob/master/Images/song_data_shape.PNG)
 
 
