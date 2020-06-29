@@ -12,7 +12,7 @@ The objective statement is one of your biggest indicators that you should be usi
 
 Should you not be given an objective statement, explore the data and see if you can identify the dependent and independent variables. If a column stands out to you to be the dependant column, then analyse the data in this column and check to see if you can find a pattern in the data. 
 
-## Exploring the data
+## Importing the data
 The data is provided in a comma separated value (CSV) file. We can open in file in any spreadsheet reader (like Microsoft Excel) and explore the file as a whole. Viewing it in this manner gives us opportunities to look at the data in its entirety. We can quickly find the number of columns (or features), the number of rows of data, and maybe if we see any missing values. Using filters on the data allows us to check the data for missing values, the class names etc. 
 
 
@@ -22,7 +22,16 @@ song_data = pd.read_csv('dataset-of-00s.csv')
 song_data.head()
 ```
 
+Output:
 ![song_data_head](https://github.com/premthomas/Logistic-Regression/blob/master/Images/song_data_head.png)
 
+## Exploring the data
+Start with find the number of columns (also popularly called features) and the number of rows of data. A dataframe object has the method called shape which returns a tuple with the number of rows and number of columns. The format of this data is '(no. of rows, no. of columns)'.
+
+```Python
+song_data.shape
+```
+Output:
+![song_data_shape](https://github.com/premthomas/Logistic-Regression/blob/master/Images/song_data_shape.jpg)
 
 
