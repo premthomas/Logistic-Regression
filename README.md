@@ -37,4 +37,45 @@ Output:
 
 ![song_data_shape](https://github.com/premthomas/Logistic-Regression/blob/master/Images/song_data_shape.PNG)
 
+## Question: Is the amount of data sufficient?
+While the definition of 'too few' can vary wildly between developers, the formula I use is 10x^2, where x = number of columns. For example, in this study, we have 19 columns, including the identifiers and target columns. This means that if I have about 3610 rows of data, the algorithm should be able to create models with relatively good accuracies. NOTE that this check is done before and after cleaning the data (the next step).
+
+
+Continuing with the exploration of the data, let us look at the types of data we have.
+```Python
+song_data.dtypes
+```
+
+Output:
+
+
+![song_data_dtype](https://github.com/premthomas/Logistic-Regression/blob/master/Images/song_data_dtype.PNG)
+
+   - We have three object fields. By the column (feature) names, and also by looking at the sample set ('head' statement) of the dataframe, we know that these fields are identifiers. These fields are to be dropped from the analysis as they will not provide any value. Identifier values are unique for each record. 
+   - The rest of the features are numerical consisting of integer and float values. These features should be used in the analysis. 
+   - We also have a feature called 'target'. An integer field. This could be the feature that indicates if a song is a 'hit' or a 'flop'.
+
+## Question: So do we drop all 'object' features from the analysis? 
+No. There is another type of data called 'Categorical'. Think of this as a closed set of values of which one is used to describe the record. This is a feature could be provided in text format which we will need to 'encode' (convert to a numerical format) so that it can be used in the learning (or fitting) phase of the project. As this case does not contain any categorical data, we will explore it in another case study.
+
+
+We have only skimmed the surface of exploration. Taking it up one level we have the describe statement. This method for the dataframe object looks at the numerical features and provides statistics for them. Some of the statistical values are count, mean, standard deviation, quartile values, and min / max values. Let's execute the code and look at the output. 
+```Python
+song_data.describe()
+```
+
+Output:
+
+
+![song_data_describe](https://github.com/premthomas/Logistic-Regression/blob/master/Images/song_data_describe.PNG)
+
+
+Look at the 'count' of the features and you will notice that the value is 5872 which is exactly the number of records. It shows that there is no missing data. This is important as we might not need to clean the data. Some of the decisions we might have had to take while cleaning data is as follows.
+   - We can take an educated guess and try and fill these missing feature values. 
+   - If the number of missing features is greater than the values present for the feature, we might have to decide if dropping the feature altogether. Filling in the missing values with what essentially as guesses might be more detremental to analysis.
+
+
+
+
+
 
