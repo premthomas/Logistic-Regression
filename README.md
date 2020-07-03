@@ -72,9 +72,11 @@ Output:
 
 Look at the 'count' of the features and you will notice that the value is 5872 which is exactly the number of records. It shows that there is no missing data. This is important as we might not need to clean the data. Some of the decisions we might have had to take while cleaning data is as follows.
    - We can take an educated guess and try and fill these missing feature values. 
-   - If the number of missing features is greater than the values present for the feature, we might have to decide if dropping the feature altogether. Filling in the missing values with what essentially as guesses might be more detremental to analysis.
-
-
+   - If the number of missing values in a feature is significant, you should consider dropping the feature from the analysis. 
+   
+   
+Finally, let us look at the data after cleaning and exploration.
+   - We have identified the independent variable. This is the variable which we need to predict. The column name is 'Target'. And it contains two classes: 'Hit' and 'Flop'.
 
 
 
